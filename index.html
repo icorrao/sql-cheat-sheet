@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Clase 1</h1>
+    <h2>show databases</h2>
+
+    <p>
+      "SHOW DATABASES" es un comando utilizado en MySQL para mostrar una lista
+      de todas las bases de datos existentes en el servidor de bases de datos
+      MySQL al que se está conectando.
+    </p>
+
+    <p>
+      El comando se utiliza para obtener información sobre las bases de datos
+      disponibles en el servidor, como su nombre y tamaño, y se puede usar para
+      verificar si una base de datos específica existe antes de ejecutar
+      comandos que la usen.
+    </p>
+
+    <p>
+      Para ejecutar el comando "SHOW DATABASES", debe tener acceso a la cuenta
+      de MySQL y ejecutar el comando en la línea de comandos de MySQL o en una
+      herramienta de gestión de bases de datos que admita la ejecución de
+      comandos SQL, como PHPMyAdmin.
+    </p>
+
+    <p>
+      El resultado del comando mostrará una lista de las bases de datos
+      disponibles en el servidor de MySQL, que puede incluir las bases de datos
+      del sistema y las bases de datos creadas por el usuario.
+    </p>
+
+    <hr />
+
+    <h2>show tables</h2>
+
+    <p>
+      "SHOW TABLES" es un comando utilizado en MySQL para mostrar una lista de
+      tablas en una base de datos específica. Al ejecutar el comando "SHOW
+      TABLES", se obtiene una lista de todas las tablas que existen en la base
+      de datos actual.
+    </p>
+
+    <p>
+      Este comando es útil para obtener información sobre las tablas de una base
+      de datos específica, como su nombre y estructura. También se puede
+      utilizar para verificar la existencia de una tabla antes de ejecutar
+      comandos que la utilicen.
+    </p>
+
+    <p>
+      Para ejecutar el comando "SHOW TABLES", es necesario estar conectado a una
+      base de datos en MySQL. El comando se puede ejecutar en la línea de
+      comandos de MySQL o en una herramienta de gestión de bases de datos que
+      admita la ejecución de comandos SQL, como PHPMyAdmin.
+    </p>
+
+    <p>
+      El resultado del comando mostrará una lista de todas las tablas en la base
+      de datos actual, junto con sus nombres y otras informaciones relevantes,
+      como el número de columnas y la estructura de la tabla.
+    </p>
+
+    <hr />
+
+    <h2>create table usuarios</h2>
+
+    <p>
+      "CREATE TABLE usuarios" es un comando utilizado en MySQL para crear una
+      nueva tabla llamada "usuarios" en una base de datos específica.
+    </p>
+
+    <p>
+      Este comando define la estructura de la tabla, especificando los nombres y
+      tipos de datos de las columnas que se utilizarán para almacenar los datos
+      de los usuarios.
+    </p>
+
+    <p>Un ejemplo de cómo se podría usar este comando es el siguiente:</p>
+
+    <code>
+      TABLE usuarios ( id INT PRIMARY KEY, nombre VARCHAR(50), email
+      VARCHAR(100) );</code
+    >
+
+    <p>
+      Este comando crea una tabla llamada "usuarios" con tres columnas: "id",
+      "nombre" y "email". La columna "id" es un número entero que se define como
+      clave primaria de la tabla, lo que significa que no puede haber valores
+      duplicados. Las columnas "nombre" y "email" son cadenas de texto con un
+      máximo de 50 y 100 caracteres respectivamente.
+    </p>
+
+    <p>
+      Una vez que se crea la tabla, se pueden insertar datos utilizando el
+      comando "INSERT INTO" y seleccionar datos utilizando el comando "SELECT".
+      La tabla también se puede modificar utilizando el comando "ALTER TABLE", o
+      eliminarse utilizando el comando "DROP TABLE".
+    </p>
+
+    <hr />
+
+    <h2>drop table usuarios</h2>
+
+    <p>
+      "DROP TABLE usuarios" es un comando utilizado en MySQL para eliminar una
+      tabla llamada "usuarios" en una base de datos específica.
+    </p>
+
+    <p>
+      Este comando elimina completamente la tabla "usuarios" y todos los datos
+      que contiene, por lo que debe usarse con precaución y solo si está seguro
+      de que desea eliminar la tabla y los datos que contiene.
+    </p>
+
+    <p>Un ejemplo de cómo se podría usar este comando es el siguiente:</p>
+
+    <code>DROP TABLE usuarios;</code>
+
+    <p>
+      Este comando eliminaría completamente la tabla "usuarios" y todos los
+      datos que contiene. Si hay datos importantes almacenados en la tabla, es
+      importante hacer una copia de seguridad de la tabla antes de ejecutar este
+      comando para asegurarse de que no se pierdan los datos importantes.
+    </p>
+
+    <p>
+      También es posible agregar una cláusula "IF EXISTS" al comando para evitar
+      errores en caso de que la tabla no exista en la base de datos. El comando
+      modificado quedaría de la siguiente manera:
+    </p>
+
+    <code>DROP TABLE IF EXISTS usuarios;</code>
+
+    <p>
+      De esta forma, si la tabla "usuarios" no existe en la base de datos, no se
+      producirá ningún error al ejecutar el comando "DROP TABLE".
+    </p>
+
+    <hr />
+
+    <h2>
+      insert into libros (nombre, autor, precio) values ("un libro" "jorge
+      marquez", "200);
+    </h2>
+
+    <p>
+      El comando "INSERT INTO" se utiliza en MySQL para insertar una nueva fila
+      en una tabla existente, y el comando que proporcionas:
+    </p>
+
+    <code
+      >INSERT INTO libros (nombre, autor, precio) VALUES ("un libro", "jorge
+      marquez", "200");</code
+    >
+
+    <p>
+      Este comando insertaría una nueva fila en la tabla "libros" con los
+      valores especificados. La columna "nombre" recibiría el valor "un librol",
+      la columna "autor" recibiría el valor "jorge marquez" y la columna
+      "precio" recibiría el valor "200". Si la operación es exitosa, se
+      agregaría una nueva fila a la tabla "libros".
+    </p>
+
+    <hr />
+
+    <h2>select nombre from usuarios</h2>
+
+    <p>
+      El comando "SELECT nombre FROM usuarios" en SQL se utiliza para recuperar
+      los valores de la columna "nombre" de la tabla "usuarios" en una base de
+      datos.
+    </p>
+
+    <p>
+      Este comando selecciona todas las filas de la tabla "usuarios" y muestra
+      solo la columna "nombre" para cada fila. Si la tabla "usuarios" tiene 10
+      filas con nombres diferentes, el comando "SELECT nombre FROM usuarios"
+      mostraría esos 10 nombres.
+    </p>
+
+    <hr />
+
+    <h2>select * from usuarios</h2>
+
+    <p>
+      El comando "SELECT * FROM usuarios" en SQL se utiliza para recuperar todas
+      las filas y todas las columnas de la tabla "usuarios" en una base de
+      datos.
+    </p>
+
+    <hr />
+
+    <h2>select nombre, clave from usuarios</h2>
+
+    <p>
+      El comando "SELECT nombre, clave FROM usuarios" en SQL se utiliza para
+      recuperar los valores de las columnas "nombre" y "clave" de la tabla
+      "usuarios" en una base de datos.
+    </p>
+
+    <p>
+      Este comando selecciona todas las filas de la tabla "usuarios" y muestra
+      solo las columnas "nombre" y "clave" para cada fila. Si la tabla
+      "usuarios" tiene 10 filas con diferentes valores en varias columnas, el
+      comando "SELECT nombre, clave FROM usuarios" mostrará esos 10 nombres y
+      claves.
+    </p>
+
+    <hr />
+
+    <h2>select nombre, clave from usuarios where nombre = "marcelo"</h2>
+
+    <p>
+      El comando "SELECT nombre, clave FROM usuarios WHERE nombre = 'marcelo'"
+      en SQL se utiliza para recuperar los valores de las columnas "nombre" y
+      "clave" de la tabla "usuarios" donde el valor de la columna "nombre" sea
+      igual a "marcelo".
+    </p>
+
+    <p>
+      Este comando selecciona todas las filas de la tabla "usuarios" donde el
+      valor de la columna "nombre" sea igual a "marcelo" y muestra solo las
+      columnas "nombre" y "clave" para cada fila que cumpla con esa condición.
+      Si la tabla "usuarios" tiene 10 filas con diferentes valores en varias
+      columnas, el comando "SELECT nombre, clave FROM usuarios WHERE nombre =
+      'marcelo'" mostrará solo las filas donde el valor de la columna "nombre"
+      sea "marcelo" y las columnas "nombre" y "clave" de esas filas.
+    </p>
+
+    <hr />
+
+    <h2>drop table if exists libros</h2>
+
+    <p>
+      El comando "DROP TABLE IF EXISTS libros" en SQL se utiliza para eliminar
+      la tabla "libros" de la base de datos. La cláusula "IF EXISTS" comprueba
+      si la tabla existe antes de intentar eliminarla y evita un error si la
+      tabla no existe.
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where precios > 20</h2>
+
+    <p>
+      El comando "SELECT * FROM libros WHERE precios > 20" en SQL se utiliza
+      para recuperar todas las filas y columnas de la tabla "libros" donde el
+      valor de la columna "precios" es mayor que 20.
+    </p>
+
+    <p>
+      Este comando selecciona todas las filas de la tabla "libros" donde el
+      valor de la columna "precios" es mayor que 20 y muestra todas las columnas
+      para cada fila que cumpla con esa condición. Si la tabla "libros" tiene 10
+      filas con diferentes valores en varias columnas, el comando "SELECT * FROM
+      libros WHERE precios > 20" mostrará todas esas filas y todas las columnas
+      de esas filas.
+    </p>
+
+    <hr />
+
+    <h2>delete from usuarios where nombre = "leonardo"</h2>
+
+    <p>
+      La consulta "DELETE FROM usuarios WHERE nombre = 'leonardo' en SQL"
+      elimina todas las filas de la tabla "usuarios" donde el valor en la
+      columna "nombre" es igual a "leonardo". En otras palabras, esta consulta
+      borra todos los registros de la tabla de usuarios que corresponden al
+      usuario llamado "leonardo".
+    </p>
+
+    <hr />
+
+    <h2>select *, max(precio) from libros</h2>
+
+    <p>
+      La consulta "SELECT *, MAX(precio) FROM libros" en SQL selecciona todos
+      los registros de la tabla "libros" y también devuelve el valor máximo en
+      la columna "precio". La función MAX() se utiliza para obtener el valor
+      máximo de una columna específica. En este caso, la consulta devolverá
+      todas las columnas de la tabla "libros", y además incluirá una columna
+      adicional con el valor máximo de la columna "precio".
+    </p>
+
+    <hr />
+
+    <h2>select count(*) from libros</h2>
+
+    <p>
+      La consulta "SELECT COUNT() FROM libros" en SQL devuelve el número total
+      de registros que hay en la tabla "libros". La función COUNT() se utiliza
+      para contar todas las filas de una tabla. En este caso, la consulta
+      devolverá una sola columna con el valor numérico que representa la
+      cantidad de registros que hay en la tabla "libros".
+    </p>
+
+    <hr />
+
+    <h1>Clase 2</h1>
+
+    <h2>select * from libros order by titulo</h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros ORDER BY titulo" se utiliza para
+      recuperar todas las filas de la tabla "libros" en una base de datos y
+      ordenarlas en orden ascendente según los valores de la columna "titulo".
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "ORDER BY" se
+      utiliza para ordenar los datos y "titulo" es el nombre de la columna por
+      la que se ordenarán los datos.
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros ORDER BY titulo"
+      recuperará todas las filas de la tabla "libros" y las ordenará
+      alfabéticamente por la columna "titulo".
+    </p>
+
+    <h2>select * from libros order by precio desc;</h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros ORDER BY precio DESC" se utiliza
+      para recuperar todas las filas de la tabla "libros" en una base de datos y
+      ordenarlas en orden descendente según los valores de la columna "precio".
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "ORDER BY" se
+      utiliza para ordenar los datos y "precio" es el nombre de la columna por
+      la que se ordenarán los datos.
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros ORDER BY precio DESC"
+      recuperará todas las filas de la tabla "libros" y las ordenará en orden
+      descendente según el valor de la columna "precio". Es decir, los libros
+      más caros aparecerán primero en la lista.
+    </p>
+
+    <hr />
+
+    <h2>
+      select codigo, titulo, autor, editorial, precio from libros order by
+      titulo asc, editorial desc;
+    </h2>
+
+    <p>
+      La instrucción SQL "SELECT codigo, titulo, autor, editorial, precio FROM
+      libros ORDER BY titulo ASC, editorial DESC" se utiliza para recuperar
+      todas las filas de la tabla "libros" en una base de datos, seleccionando
+      solo las columnas "codigo", "titulo", "autor", "editorial" y "precio". Los
+      resultados se ordenarán en orden ascendente según los valores de la
+      columna "titulo" y en orden descendente según los valores de la columna
+      "editorial".
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "codigo",
+      "titulo", "autor", "editorial" y "precio" son los nombres de las columnas
+      específicas que se van a seleccionar y "FROM libros" especifica el nombre
+      de la tabla de la que se recuperarán los datos. "ORDER BY" se utiliza para
+      ordenar los datos y "titulo ASC" y "editorial DESC" son los nombres de las
+      columnas por las que se ordenarán los datos, con "ASC" especificando orden
+      ascendente y "DESC" especificando orden descendente.
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT codigo, titulo, autor, editorial,
+      precio FROM libros ORDER BY titulo ASC, editorial DESC" recuperará todas
+      las filas de la tabla "libros", seleccionando solo las columnas "codigo",
+      "titulo", "autor", "editorial" y "precio", y ordenará los resultados en
+      orden ascendente según los valores de la columna "titulo" y en orden
+      descendente según los valores de la columna "editorial".
+    </p>
+
+    <h2>select * from libros where autor = 'borges';</h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros WHERE autor = 'borges'" se
+      utiliza para recuperar todas las filas de la tabla "libros" en una base de
+      datos donde el valor de la columna "autor" es igual a "borges".
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "WHERE" se utiliza
+      para filtrar los datos y "autor = 'borges'" especifica que solo se deben
+      recuperar las filas donde el valor de la columna "autor" sea igual a
+      "borges".
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros WHERE autor = 'borges'"
+      recuperará todas las filas de la tabla "libros" donde el valor de la
+      columna "autor" es igual a "borges".
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where autor = 'borges' and precio <= 20;</h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros WHERE autor = 'borges' AND precio
+      <= 20" se utiliza para recuperar todas las filas de la tabla "libros" en
+      una base de datos donde el valor de la columna "autor" es igual a "borges"
+      y el valor de la columna "precio" es menor o igual a 20.
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "WHERE" se utiliza
+      para filtrar los datos y "autor = 'borges' AND precio <= 20" especifica
+      que solo se deben recuperar las filas donde el valor de la columna "autor"
+      sea igual a "borges" y el valor de la columna "precio" sea menor o igual a
+      20.
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros WHERE autor = 'borges'
+      AND precio <= 20" recuperará todas las filas de la tabla "libros" donde el
+      valor de la columna "autor" es igual a "borges" y el valor de la columna
+      "precio" es menor o igual a 20.
+    </p>
+
+    <hr />
+
+    <h2>
+      select * from libros where (autor = 'borges') or (editorial='paidos')
+    </h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros WHERE (autor = 'borges') OR
+      (editorial='paidos')" se utiliza para recuperar todas las filas de la
+      tabla "libros" en una base de datos donde el valor de la columna "autor"
+      es igual a "borges" o el valor de la columna "editorial" es igual a
+      "paidos".
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "WHERE" se utiliza
+      para filtrar los datos y "(autor = 'borges') OR (editorial='paidos')"
+      especifica que solo se deben recuperar las filas donde el valor de la
+      columna "autor" sea igual a "borges" o el valor de la columna "editorial"
+      sea igual a "paidos".
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros WHERE (autor =
+      'borges') OR (editorial='paidos')" recuperará todas las filas de la tabla
+      "libros" donde el valor de la columna "autor" es igual a "borges" o el
+      valor de la columna "editorial" es igual a "paidos".
+    </p>
+
+    <hr />
+
+    <h2>
+      select * from libros where (autor = 'borges') xor (editorial='paidos' and
+      precio<20)
+    </h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros WHERE (autor = 'borges') XOR
+      (editorial='paidos' AND precio<20)" se utiliza para recuperar todas las
+      filas de la tabla "libros" en una base de datos donde el valor de la
+      columna "autor" es igual a "borges" o donde el valor de la columna
+      "editorial" es igual a "paidos" y el valor de la columna "precio" es menor
+      a 20, pero no donde ambas condiciones sean verdaderas.
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "WHERE" se utiliza
+      para filtrar los datos y "(autor = 'borges') XOR (editorial='paidos' AND
+      precio<20)" especifica que solo se deben recuperar las filas donde el
+      valor de la columna "autor" es igual a "borges" o donde el valor de la
+      columna "editorial" es igual a "paidos" y el valor de la columna "precio"
+      es menor a 20, pero no donde ambas condiciones sean verdaderas.
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros WHERE (autor =
+      'borges') XOR (editorial='paidos' AND precio<20)" recuperará todas las
+      filas de la tabla "libros" donde el valor de la columna "autor" es igual a
+      "borges" o donde el valor de la columna "editorial" es igual a "paidos" y
+      el valor de la columna "precio" es menor a 20, pero no donde ambas
+      condiciones sean verdaderas.
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where not (editorial = 'planeta');</h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros WHERE NOT (editorial =
+      'planeta')" se utiliza para recuperar todas las filas de la tabla "libros"
+      en una base de datos donde el valor de la columna "editorial" no sea igual
+      a "planeta".
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "WHERE" se utiliza
+      para filtrar los datos y "NOT (editorial = 'planeta')" especifica que solo
+      se deben recuperar las filas donde el valor de la columna "editorial" no
+      sea igual a "planeta".
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros WHERE NOT (editorial =
+      'planeta')" recuperará todas las filas de la tabla "libros" en una base de
+      datos donde el valor de la columna "editorial" no sea igual a "planeta".
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where precio >= 20 and precio <= 40;</h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros WHERE precio >= 20 AND precio <=
+      40" se utiliza para recuperar todas las filas de la tabla "libros" en una
+      base de datos donde el valor de la columna "precio" sea mayor o igual a 20
+      y menor o igual a 40.
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "WHERE" se utiliza
+      para filtrar los datos y "precio >= 20 AND precio <= 40" especifica que
+      solo se deben recuperar las filas donde el valor de la columna "precio"
+      sea mayor o igual a 20 y menor o igual a 40.
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros WHERE precio >= 20 AND
+      precio <= 40" recuperará todas las filas de la tabla "libros" en una base
+      de datos donde el valor de la columna "precio" sea mayor o igual a 20 y
+      menor o igual a 40.
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where precio not between 20 and 40;</h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros WHERE precio NOT BETWEEN 20 AND
+      40" se utiliza para recuperar todas las filas de la tabla "libros" en una
+      base de datos donde el valor de la columna "precio" no esté en el rango de
+      20 a 40 (excluyendo los valores 20 y 40).
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "WHERE" se utiliza
+      para filtrar los datos y "precio NOT BETWEEN 20 AND 40" especifica que
+      solo se deben recuperar las filas donde el valor de la columna "precio" no
+      esté en el rango de 20 a 40.
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros WHERE precio NOT
+      BETWEEN 20 AND 40" recuperará todas las filas de la tabla "libros" en una
+      base de datos donde el valor de la columna "precio" no esté en el rango de
+      20 a 40 (excluyendo los valores 20 y 40).
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where autor = 'borges' xor autor = 'paenza'</h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros WHERE autor = 'borges' XOR autor
+      = 'paenza'" se utiliza para recuperar todas las filas de la tabla "libros"
+      en una base de datos donde el valor de la columna "autor" sea igual a
+      "borges" o "paenza", pero no ambos.
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "WHERE" se utiliza
+      para filtrar los datos y "autor = 'borges' XOR autor = 'paenza'"
+      especifica que solo se deben recuperar las filas donde el valor de la
+      columna "autor" sea igual a "borges" o "paenza", pero no ambos.
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros WHERE autor = 'borges'
+      XOR autor = 'paenza'" recuperará todas las filas de la tabla "libros" en
+      una base de datos donde el valor de la columna "autor" sea igual a
+      "borges" o "paenza", pero no ambos.
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where autor in ('borges','paenza')</h2>
+
+    <p>
+      La instrucción SQL "SELECT * FROM libros WHERE autor IN ('borges',
+      'paenza')" se utiliza para recuperar todas las filas de la tabla "libros"
+      en una base de datos donde el valor de la columna "autor" sea igual a
+      "borges" o "paenza".
+    </p>
+
+    <p>
+      "SELECT" se utiliza para recuperar datos de una base de datos, "*"
+      significa seleccionar todas las columnas y "FROM libros" especifica el
+      nombre de la tabla de la que se recuperarán los datos. "WHERE" se utiliza
+      para filtrar los datos y "autor IN ('borges', 'paenza')" especifica que
+      solo se deben recuperar las filas donde el valor de la columna "autor" sea
+      igual a "borges" o "paenza".
+    </p>
+
+    <p>
+      Por lo tanto, la instrucción "SELECT * FROM libros WHERE autor IN
+      ('borges', 'paenza')" recuperará todas las filas de la tabla "libros" en
+      una base de datos donde el valor de la columna "autor" sea igual a
+      "borges" o "paenza".
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where autor like 'borges'</h2>
+
+    <p>
+      La consulta "SELECT * FROM libros WHERE autor LIKE 'borges'" en SQL busca
+      en la tabla "libros" todos los registros donde el valor de la columna
+      "autor" contenga la cadena de texto "borges". El operador "LIKE" se
+      utiliza para buscar coincidencias parciales en una cadena de texto. El
+      símbolo "%" se puede utilizar como comodín para representar cualquier
+      conjunto de caracteres. Por lo tanto, en este caso, la consulta devolvería
+      todos los registros de la tabla "libros" cuyo autor contenga la cadena
+      "borges" en cualquier parte del valor de la columna "autor".
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where autor like / not like '%borges%'</h2>
+
+    <p>
+      La consulta "SELECT * FROM libros WHERE autor LIKE '%borges%'" en SQL
+      busca en la tabla "libros" todos los registros donde el valor de la
+      columna "autor" contenga la cadena de texto "borges" en cualquier posición
+      dentro del valor de la columna. El operador "%", utilizado dentro de la
+      cadena de búsqueda, es un comodín que representa cualquier conjunto de
+      caracteres. Por lo tanto, en este caso, la consulta devolvería todos los
+      registros de la tabla "libros" cuyo autor contenga la cadena "borges" en
+      cualquier parte del valor de la columna "autor", ya sea al principio, al
+      final o en cualquier otra posición del valor de la columna.
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where autor like 'borges%'</h2>
+
+    <p>
+      La consulta "SELECT * FROM libros WHERE autor LIKE 'borges%'" en SQL busca
+      en la tabla "libros" todos los registros donde el valor de la columna
+      "autor" comienza con la cadena de texto "borges". El operador "%" se
+      utiliza como comodín para representar cualquier conjunto de caracteres
+      después de la cadena de búsqueda. Por lo tanto, en este caso, la consulta
+      devolvería todos los registros de la tabla "libros" cuyo autor comience
+      con la cadena "borges".
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where autor like '%borges'</h2>
+
+    <p>
+      La consulta "SELECT * FROM libros WHERE autor LIKE '%borges'" en SQL busca
+      en la tabla "libros" todos los registros donde el valor de la columna
+      "autor" termina con la cadena de texto "borges". El operador "%" se
+      utiliza como comodín para representar cualquier conjunto de caracteres
+      antes de la cadena de búsqueda. Por lo tanto, en este caso, la consulta
+      devolvería todos los registros de la tabla "libros" cuyo autor termine con
+      la cadena "borges".
+    </p>
+
+    <hr />
+
+    <h2>select * from libros where autor like 'borges_'</h2>
+
+    <p>
+      La consulta "SELECT * FROM libros WHERE autor LIKE 'borges_'" en SQL busca
+      en la tabla "libros" todos los registros donde el valor de la columna
+      "autor" comienza con la cadena de texto "borges" y luego tiene exactamente
+      un carácter adicional. El carácter "_" se utiliza como comodín para
+      representar cualquier carácter individual. Por lo tanto, en este caso, la
+      consulta devolvería todos los registros de la tabla "libros" cuyo autor
+      tenga la palabra "borges" seguida por un carácter adicional (por ejemplo,
+      "borgesT" o "borges1").
+    </p>
+
+    <hr />
+
+    <h2>select count(*) from libros;</h2>
+
+    <p>
+      La consulta "SELECT COUNT() FROM libros" en SQL devuelve el número total
+      de registros en la tabla "libros". La función COUNT() cuenta el número de
+      filas en una tabla. Por lo tanto, en este caso, la consulta devolvería un
+      único valor que representa el número total de registros en la tabla
+      "libros".
+    </p>
+
+    <hr />
+
+    <h2>select count(*) from libros where editorial = 'planeta';</h2>
+
+    <p>
+      La consulta "SELECT COUNT() FROM libros WHERE editorial = 'planeta'" en
+      SQL devuelve el número total de registros en la tabla "libros" donde el
+      valor de la columna "editorial" es igual a "planeta". La función COUNT()
+      cuenta el número de filas en una tabla que satisfacen una determinada
+      condición. Por lo tanto, en este caso, la consulta devolvería un único
+      valor que representa el número total de registros en la tabla "libros" que
+      tienen "planeta" como editorial.
+    </p>
+
+    <hr />
+
+    <h2>select sum(precio) from libros;</h2>
+
+    <p>
+      La consulta "SELECT SUM(precio) FROM libros" en SQL devuelve la suma total
+      de la columna "precio" en la tabla "libros". La función SUM se utiliza
+      para sumar valores numéricos en una columna determinada. Por lo tanto, en
+      este caso, la consulta devolvería un único valor que representa la suma
+      total de precios de todos los libros en la tabla "libros".
+    </p>
+
+    <hr />
+
+    <h2>select max/min/avg(precio) from libros;</h2>
+
+    <p>lo mismo pero con maximo, minimo y promedio</p>
+
+    <hr />
+
+    <h2>select avg(precio) from libros where autor like '%borges%';</h2>
+
+    <p>
+      La consulta "SELECT AVG(precio) FROM libros WHERE autor LIKE '%borges%'"
+      en SQL devuelve el promedio de la columna "precio" en la tabla "libros"
+      para aquellos registros donde el valor de la columna "autor" contiene la
+      cadena de texto "borges". La función AVG se utiliza para calcular el
+      promedio de los valores numéricos en una columna determinada que
+      satisfacen una determinada condición. Por lo tanto, en este caso, la
+      consulta devolvería un único valor que representa el promedio de precios
+      de todos los libros en la tabla "libros" cuyo autor contiene la cadena
+      "borges".
+    </p>
+
+    <hr />
+
+    <h2>select count(*) from visitantes where ciudad = 'cordoba'</h2>
+
+    <p>
+      La consulta "SELECT COUNT() FROM visitantes WHERE ciudad = 'cordoba'" en
+      SQL devuelve el número total de registros en la tabla "visitantes" donde
+      el valor de la columna "ciudad" es igual a "cordoba". La función COUNT()
+      cuenta el número de filas en una tabla que satisfacen una determinada
+      condición. Por lo tanto, en este caso, la consulta devolvería un único
+      valor que representa el número total de registros en la tabla "visitantes"
+      que tienen "cordoba" como ciudad.
+    </p>
+
+    <hr />
+
+    <h2>
+      select count(*) from visitantes where ciudad = 'cordoba' or ciudad='villa
+      dolores'
+    </h2>
+
+    <p>
+      La consulta "SELECT COUNT() FROM visitantes WHERE ciudad = 'cordoba' OR
+      ciudad='villa dolores'" en SQL devuelve el número total de registros en la
+      tabla "visitantes" que son de la ciudad de "Córdoba" o de "Villa Dolores".
+      La función COUNT() cuenta el número de filas en una tabla que satisfacen
+      una determinada condición. Por lo tanto, en este caso, la consulta
+      devolverá un único valor que representa el número total de registros en la
+      tabla "visitantes" que son de la ciudad de "Córdoba" o de "Villa Dolores".
+    </p>
+
+    <hr />
+
+    <h2>select ciudad, count(*) from visitantes group by ciudad</h2>
+
+    <p>
+      La consulta "SELECT ciudad, COUNT() FROM visitantes GROUP BY ciudad" en
+      SQL devuelve el número total de visitantes en la tabla "visitantes" para
+      cada ciudad distinta registrada en la tabla. La cláusula GROUP BY se
+      utiliza para agrupar los registros según un campo específico, en este
+      caso, el campo "ciudad". La función COUNT() cuenta el número de filas en
+      cada grupo de ciudad. Por lo tanto, en este caso, la consulta devolverá un
+      conjunto de resultados donde cada fila contiene el nombre de la ciudad y
+      el número total de registros en la tabla "visitantes" correspondientes a
+      esa ciudad.
+    </p>
+
+    <hr />
+
+    <h2>select ciudad, count(telefono) from visitantes group by ciudad</h2>
+
+    <p>
+      La consulta "SELECT ciudad, COUNT(telefono) FROM visitantes GROUP BY
+      ciudad" en SQL devuelve el número total de registros en la tabla
+      "visitantes" para cada ciudad distinta registrada en la tabla, que tienen
+      un valor no nulo en la columna "telefono". La cláusula GROUP BY se utiliza
+      para agrupar los registros según un campo específico, en este caso, el
+      campo "ciudad". La función COUNT(telefono) cuenta el número de valores no
+      nulos en la columna "telefono" para cada grupo de ciudad. Por lo tanto, en
+      este caso, la consulta devolverá un conjunto de resultados donde cada fila
+      contiene el nombre de la ciudad y el número total de registros en la tabla
+      "visitantes" correspondientes a esa ciudad que tienen un valor no nulo en
+      la columna "telefono".
+    </p>
+
+    <hr />
+
+    <h2>select sexo, max(montocompra) from visitantes group by sexo;</h2>
+
+    <p>
+      La consulta "SELECT sexo, MAX(montocompra) FROM visitantes GROUP BY sexo"
+      en SQL devuelve el valor máximo del campo "montocompra" para cada valor
+      distinto de "sexo" en la tabla "visitantes". La cláusula GROUP BY se
+      utiliza para agrupar los registros según un campo específico, en este
+      caso, el campo "sexo". La función MAX(montocompra) devuelve el valor
+      máximo de "montocompra" para cada grupo de sexo. Por lo tanto, en este
+      caso, la consulta devolverá un conjunto de resultados donde cada fila
+      contiene el valor de "sexo" y el valor máximo de "montocompra" para ese
+      grupo de sexo.
+    </p>
+
+    <hr />
+
+    <h2>
+      select sexo, max(montocompra), min(montocompra) from visitantes group by
+      sexo;
+    </h2>
+
+    <p>
+      La consulta "SELECT sexo, MAX(montocompra), MIN(montocompra) FROM
+      visitantes GROUP BY sexo" en SQL devuelve el valor máximo y mínimo del
+      campo "montocompra" para cada valor distinto de "sexo" en la tabla
+      "visitantes". La cláusula GROUP BY se utiliza para agrupar los registros
+      según un campo específico, en este caso, el campo "sexo". La función
+      MAX(montocompra) devuelve el valor máximo de "montocompra" para cada grupo
+      de sexo, mientras que la función MIN(montocompra) devuelve el valor mínimo
+      de "montocompra" para cada grupo de sexo. Por lo tanto, en este caso, la
+      consulta devolverá un conjunto de resultados donde cada fila contiene el
+      valor de "sexo", el valor máximo de "montocompra" para ese grupo de sexo y
+      el valor mínimo de "montocompra" para ese grupo de sexo.
+    </p>
+
+    <hr />
+
+    <h2>select nombre from visitantes where montocompra < 20;</h2>
+
+    <p>
+      La consulta "SELECT nombre FROM visitantes WHERE montocompra < 20" en SQL
+      devuelve el nombre de todos los visitantes en la tabla "visitantes" que
+      tienen un valor de "montocompra" menor a 20. La cláusula WHERE se utiliza
+      para filtrar los registros según una condición específica, en este caso,
+      la condición es que el valor de "montocompra" debe ser menor a 20. Por lo
+      tanto, en este caso, la consulta devolverá un conjunto de resultados donde
+      cada fila contiene el nombre de un visitante cuyo valor de "montocompra"
+      es menor a 20.
+    </p>
+
+    <hr />
+
+    <h2>select nombre, if(montocompra<20,'barato','caro') from visitantes</h2>
+
+    <p>
+      La consulta "SELECT nombre, IF(montocompra<20,'barato','caro') FROM
+      visitantes" en SQL devuelve el nombre de todos los visitantes en la tabla
+      "visitantes", junto con una etiqueta que indica si el valor de
+      "montocompra" para cada visitante es "barato" o "caro". La función IF se
+      utiliza para crear una etiqueta basada en una condición específica. En
+      este caso, la condición es que el valor de "montocompra" debe ser menor a
+      20, y si se cumple esta condición, la etiqueta será "barato"; en caso
+      contrario, la etiqueta será "caro". Por lo tanto, en este caso, la
+      consulta devolverá un conjunto de resultados donde cada fila contiene el
+      nombre de un visitante y una etiqueta que indica si su valor de
+      "montocompra" es "barato" o "caro".
+    </p>
+
+    <hr />
+
+    <h2>
+      select * from libros join editoriales on libros.codigoeditorial =
+      editoriales.codigo
+    </h2>
+
+    <p>
+      La consulta "SELECT * FROM libros JOIN editoriales ON
+      libros.codigoeditorial = editoriales.codigo" en SQL realiza una unión
+      (join) entre las tablas "libros" y "editoriales" utilizando la cláusula
+      "ON" para especificar el criterio de unión. En este caso, se unirán
+      solamente aquellos registros donde el valor de la columna
+      "codigoeditorial" en la tabla "libros" sea igual al valor de la columna
+      "codigo" en la tabla "editoriales".
+    </p>
+
+    <p>
+      La sintaxis "SELECT *" se utiliza para seleccionar todas las columnas de
+      ambas tablas. Además, se utiliza la sintaxis "nombreTabla.columna" para
+      especificar a qué tabla pertenece cada columna, ya que ambas tablas tienen
+      columnas con el mismo nombre ("codigoeditorial" en la tabla "libros" y
+      "codigo" en la tabla "editoriales").
+    </p>
+
+    <p>
+      El resultado de la consulta será una tabla virtual que contiene todas las
+      columnas de ambas tablas, pero solamente los registros que cumplen con el
+      criterio de unión especificado. Esto permitirá relacionar los libros con
+      su editorial correspondiente, mostrando información de ambas tablas en una
+      sola consulta.
+    </p>
+
+    <hr />
+
+    <h2>Procedimientos</h2>
+
+    <h2>
+      CREATE PROCEDURE librosmenores() BEGIN SELECT * FROM libros WHERE stock <=
+      10; END
+    </h2>
+
+    <p>
+      Esta consulta crea un procedimiento almacenado llamado "librosmenores" que
+      se ejecuta cuando se llama a la función. El procedimiento simplemente
+      ejecuta una consulta SELECT que selecciona todos los registros de la tabla
+      "libros" donde el valor de la columna "stock" sea menor o igual a 10.
+    </p>
+
+    <p>
+      Para llamar a este procedimiento desde una aplicación o una consulta SQL,
+      simplemente se debe escribir el nombre del procedimiento: CALL
+      librosmenores();
+    </p>
+  </body>
+</html>
